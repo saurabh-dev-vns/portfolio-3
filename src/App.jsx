@@ -9,7 +9,7 @@ function App() {
     <>
     
 <Router>
-<div className="w-full">
+<div className="w-full h-full">
   <Routes>
     <Route path="/" element={<Home/>}/>
     <Route path="/projects" element={<Projects/>}/>
