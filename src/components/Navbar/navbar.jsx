@@ -1,22 +1,12 @@
+import { div } from 'framer-motion/client';
 import React from 'react';
 
 const Navbar = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center absolute">
-      <nav>
-        <ul className="flex flex-col items-center">
-          <li className="mb-4">
-            <a href="/">About.</a>
-          </li>
-          <li className="absolute bottom-1 right-11">
-            <a href="/">My Skill.</a>
-          </li>
-          <li className="absolute bottom-1">
-            <a href="/">Work.</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+   <div className='z-10'>
+    <h1 className='text-black inline-block fixed left-8 top-8'>SS</h1>
+    <a href="#" className='text-black absolute top-8 right-[calc(1rem+2vw)]'>Say hi..</a>
+   </div>
   );
 };
 
