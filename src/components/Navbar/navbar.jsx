@@ -6,6 +6,11 @@ const Navbar = () => {
    <div className='z-10'>
     <h1 className='text-black inline-block fixed left-8 top-8'>SS</h1>
     <a href="#" className='text-black absolute top-8 right-[calc(1rem+2vw)]'>Say hi..</a>
+    <a href="#" className='text-black absolute top-2/4 transform -rotate-90'>Projects</a>
+   <div className='absolute bottom-4 flex justify-evenly w-full'>
+   <a href="#" className='text-black '>About</a>
+   <a href="#" className='text-black '>Skill</a>
+    </div>
    </div>
   );
 };
