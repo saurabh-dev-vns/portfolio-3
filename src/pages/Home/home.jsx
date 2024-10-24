@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Navbar from '../../components/Navbar/navbar';
 import LoadingImg from "../../assets/loading.svg";
-
+import {useGlobalContext} from "../../hooks/useGlobalContext";
 
 const Home = () => {
-    const [isClicked, setIsClicked] = useState(false);
+    const {isClicked,setIsClicked} = useGlobalContext();
 
     const handleClick = () => {
         setIsClicked(!isClicked);
@@ -29,7 +29,8 @@ const Home = () => {
                     alt="Loading"
                 />
             </button>
-            <div className={`black w-full md:w-6/12 md:h-screen h-3/6 bg-black transition-transform duration-1000 ease-in-out ${isClicked ? 'translate-y-0' : '-translate-y-full'}`}>
+            <div className={`black w-full md:w-6/12 md:h-screen h-3/6 bg-black transition-transform 
+                duration-1000 ease-in-out ${isClicked ? 'translate-y-0' : '-translate-y-full'}`}>
             </div>
             <div className="white w-full md:w-6/12 md:h-screen h-3/6 bg-white">
             </div>
