@@ -25,7 +25,7 @@ const MainCard = () => {
 
   return (
     <div
-      className={`absolute w-[55vw] md:w-[65vw] z-10 top-2/4 left-2/4 transform -translate-x-2/4 -translate-y-2/4 overflow-hidden
+      className={`absolute w-[55vw] md:w-[65vw] z-10 top-2/4 left-2/4 transform -translate-x-2/4 -translate-y-2/4 
         flex md:flex-row flex-col transition-all duration-700 ease-in-out
         ${delayedVisible ? "h-[70vh] md:h-[55vh]" : "h-0"}
       `}
