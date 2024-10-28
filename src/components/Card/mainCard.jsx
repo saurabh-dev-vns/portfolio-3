@@ -25,31 +25,39 @@ const MainCard = () => {
 
   return (
     <div
-      className={`absolute w-[55vw] md:w-[65vw] z-10 top-2/4 left-2/4 transform -translate-x-2/4 -translate-y-2/4 
-        flex md:flex-row flex-col transition-all duration-700 ease-in-out
-        ${delayedVisible ? "h-[70vh] md:h-[55vh]" : "h-0"}
+      className={`absolute w-[90vw] md:w-[65vw] flex  top-2/4 left-2/4 transform -translate-x-2/4 -translate-y-2/4 
+         md:flex-row flex-col transition-all duration-700 ease-in-out
+        ${delayedVisible ? "h-[70vh] md:h-[55vh] visible z-10" : "h-0 invisible z-0"}
       `}
     >
       {/* Left Section - Black Background */}
-      <div className="relative bg-black md:w-2/4 w-full h-full border-white border-t-2 border-l-2 md:border-b-2 border-b-0
-      border-r-2 md:border-r-0 flex items-center transition-all duration-700 ease-in-out">
-        <div className="text-white p-4">
+      <div className={`relative bg-black md:w-2/4 w-full h-full border-white border-t-2 border-l-2 md:border-b-2 border-b-0
+      border-r-2 md:border-r-0 flex items-center transition-all duration-700 ease-in-out
+      ${delayedVisible ? "visible" : "invisible"}
+      `}>
+        <div className={`text-white p-4 md:p-8
+            ${delayedVisible ? "visible" : "invisible"}
+          `}>
           <p className="text-3xl font-bold md:text-7xl">Hi,</p>
           <p className="text-2xl font-semibold pt-2 md:text-4xl">I'm Saurabh Sahani</p>
-          <p className="text-sm mt-6 md:text-[#fcf6f499] md:text-2xl">
+          <p className="text-sm mt-6 md:mt-8 md:text-2xl md:text-[#fcf6f4cc]">
             I design and code simple yet beautiful websites.
           </p>
         </div>
       </div>
 
       {/* Right Section - White Background */}
-      <div className="relative flex bg-white md:w-2/4 w-full h-full border-black border-l-2 border-b-2 border-r-2
-      md:border-t-2 md:border-l-0 transition-all duration-700 ease-in-out">
-        <div className="">
+      <div className={`relative flex bg-white md:w-2/4 w-full h-full border-black border-l-2 border-b-2 border-r-2
+      md:border-t-2 md:border-l-0 transition-all duration-700 ease-in-out
+        ${delayedVisible ? "visible" : "invisible"}
+      `}>
+        <div className="flex justify-center items-end w-full h-full p-4">
           <img
             src={ProfImg}
             alt="Profile"
-            className="w-full h-auto absolute bottom-0 left-2/4 transform -translate-x-2/4"
+            className={`w-full h-auto absolute bottom-0 left-2/4 transform -translate-x-2/4
+                ${delayedVisible ? "visible" : "invisible"}
+              `}
           />
         </div>
       </div>
