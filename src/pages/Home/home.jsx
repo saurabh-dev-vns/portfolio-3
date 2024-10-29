@@ -3,11 +3,11 @@ import Navbar from '../../components/Navbar/navbar';
 import { useGlobalContext } from "../../hooks/useGlobalContext";
 import RotatingButton from '../../components/Button/RotatingButton';
 import MainCard from '../../components/Card/mainCard';
+import SocialButtons from '../../components/SocialButtons/SocialButtons'
+
 
 const Home = () => {
-    const { isClicked, setIsClicked } = useGlobalContext();
-
-
+    const { isClicked} = useGlobalContext();
 
     return (
         <div className="w-full h-screen flex md:flex-row flex-col relative overflow-hidden">
@@ -19,6 +19,7 @@ const Home = () => {
             ></div>
             <RotatingButton />
             <MainCard/>
+            <SocialButtons/>
             <div className={`black w-full md:w-6/12 md:h-screen h-3/6 bg-black transition-transform 
                 duration-1000 ease-in-out ${isClicked ? 'translate-y-0' : '-translate-y-full'}`}>
             </div>
