@@ -6,7 +6,7 @@ const About = () => {
     <section
     className={`w-full h-screen bg-black`}
     >
-	  <h4 className = {`text-white`}>About</h4>
+	  <h4 className = {`text-white absolute`}>About</h4>
     </section>
   );
 };
